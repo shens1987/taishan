@@ -1,0 +1,28 @@
+#!/usr/bin/python3
+print("{},{}".format(10,20))
+print("{0}:{2}:{1}".format(10,20,30))
+print("姓名：{};年龄:{}".format("zhangsan",20))
+print("{:.2f}".format(10.6789))
+print("{:b}".format(100))
+print("{:x}".format(100))
+print("{:2}:{:2}".format(10,20))
+print("{:<10}:{:>10}".format(10,20))
+print("*"*20)
+# 1
+print("hello,Python!"); #2
+counter = 100 #整形
+miles   = 1.000 #浮点
+name    = "abc" #字符串
+
+print(counter)
+print(miles)
+print(name)
+
+a = b = c = 1
+x, y, z = 1, 2, "demo"
+print(a)
+print(b)
+print(c)
+print(x)
+print(y)
+print(z)
