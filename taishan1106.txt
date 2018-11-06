@@ -1,0 +1,104 @@
+#!/usr/bin/python3
+a = 10
+b =  21
+print(a+b)
+print(a-b)
+print(a*b)
+print(a/b)
+print(a%b)
+print(a**b)
+print(a//b)
+
+a=10
+b=20
+print(a==b)
+print(a!=b)
+print(a>b)
+print(a<b)
+print(a>=b)
+print(a<=b)
+
+a=10
+b=20
+print(a and b)
+print(a or b)
+print(not (a and b))
+
+a = 60
+b = 13
+print(a&b)
+print(a|b)
+print(a^b)
+print(~a)
+print(~b)
+print(a<<2)
+print(a>>2)
+
+a =10
+print(type(a))
+print(isinstance(a,int))
+
+print(bin(255)) #二进制
+print(oct(255)) #八进制
+print(hex(255)) #十六进制
+a = 0b10
+print(a)
+a = 0o10
+print(a)
+a = 0x10
+print(a)
+
+# stu['phone']='123456'
+# print(stu)
+
+a = [('a','AAA'),('b','BBBB')]
+print(a)
+print(dict(a))
+m = dict(a)
+print(m['b'])
+print(type(m))
+
+
+for i in range(5):
+    print(i)
+
+for i in range(5,9):
+    print(i)
+
+for i in range(0,10,3):
+    print(i)
+
+for i in range(5-10,-100,-30):
+    print(i)
+a = ['Google','Baidu','Sina','QQ']
+for i in range(len(a)):
+    print(i,a[i])
+
+for i in range(1,10):
+     for j in range(1,i+1):
+         print("%d*%d=%2d" % (i,j,i*j),end=" ")
+     print (" ")
+
+for i in range(9,0,-1):
+    for j in range(1,i+1):
+       print("%d*%d=%2d" % (i,j,i*j),end=" ")
+    print("")
+
+i = 1
+while i <= 9:
+    j = 1
+    while j <= i:
+        print("%d*%d=%2d"%(i,j,i*j),end = " ")
+        j += 1
+    print("")
+    i += 1
+
+i = 9
+while i >= 1:
+    j = 1
+    while j <= i:
+        print("%d*%d=%2d"%(i,j,i*j),end = " ")
+        j += 1
+    print("")
+    i -= 1
+
