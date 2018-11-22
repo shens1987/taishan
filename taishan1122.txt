@@ -1,0 +1,75 @@
+#!/usr/bin/python3
+# encoding utf=8
+# 定义展示系统功能的函数
+def menu():
+    print( '''
+    = = = = = = = = =   学员管理系统  = = = = = = = =
+        1.查看学员信息           2.添加学生信息
+        3.删除学员信息           4.退出系统
+    = = = = = = = = = = = = = = = = = = = = = = = = = 
+     ''')
+menu()
+students = []
+while True:
+    # 展示可选择的功能
+
+    # 提示用户进行功能选择
+    key = input("请输入对应的选择：")
+
+    # 根据用户选择，运行相关功能
+    if key == "1":
+        print("= " * 8, end="")
+        print("  学院信息浏览  ", end="")
+        print("= " * 8, end="")
+        # 输出学员信息
+        print("- " * 23)
+        print("|sid      |name       |age        |classid")
+        for temp in students:
+            print("%s      %s        %s         %s" % (temp['sid'], temp['name'], temp['age'], temp['classid']))
+        print("- " * 23)
+    elif key == "2":
+        print("您选择了添加学员信息功能")
+        name = input("请输入学员的姓名：")
+        age = input("请输入学员年龄:")
+        classid = input("请输入学员的班级:")
+        sid = input("请输入学员的学号:")
+        # 定义一个字典，存放单个学员信息
+        stuInfo ={}
+
+
+        stuInfo['name'] = name
+        stuInfo['age'] = age
+        stuInfo['classid'] = classid
+        stuInfo['sid'] = sid
+
+        #sid = i + 1
+        #i = sid
+
+        #stuInfo['sid'] = i
+            # 将单个学员信息存入列表
+        students.append(stuInfo)
+        print("添加成功！")
+
+    elif key == "3":
+        delId = input("请输入要删除的学员学号:")
+        i = 0
+        leap = 0
+        for temp in students:
+            if temp['sid'] == delId:
+                leap = 1
+                break
+            else:
+                i = i + 1
+        if leap == 0:
+            print("没有此学生学号，删除失败！")
+        else:
+            del students[i]
+            print("删除成功！")
+    elif key == "4":
+        # 退出功能
+          print("= = = = 再见！ = = = =")
+          break
+
+
+    else:
+        print("请输入1-4")
